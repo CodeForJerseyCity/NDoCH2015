@@ -1,0 +1,68 @@
+.sponsor {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.sponsor-image {
+	height: 50px;
+}
+
+.featurette-image {
+	width: 300px;
+}
+
+.thumbnail>img {
+	padding-top: 20px;
+}
+
+.speaker-name {
+	color: #c7521b;
+/*	font-size: 1.5em;*/
+	/*font-weight: 300;*/
+	font-weight: bold;
+}
+
+.award-img {
+	height: 40px;
+}
+
+.team-image {
+	height: 50px;
+}
+
+.team-names {
+/*	color: #c7521b;*/
+}
+
+.award-name {
+
+}
+
+.award-desc {
+	font-style: italic;
+	font-size: 80%;
+}
+
+.haiku {
+/*	font-family: 'Brush Script MT';*/
+/*	font-family: 'Papyrus';*/
+	font-style: italic;
+}
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	adding-top: 30px; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+	height: auto; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
