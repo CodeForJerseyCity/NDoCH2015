@@ -75,7 +75,8 @@
 
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background-image: url(img/National+Day+of+Civic+Hacking.jpg); background-size: cover;">
+    <section id="main" data-speed="6" data-type="background">
+    <div class="jumbotron" style="background-color: transparent;" >
       <div class="container">
         <div class="jumbotron-caption">
         
@@ -105,7 +106,7 @@
         </div>
       </div>
     </div>
-
+</section>
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -123,7 +124,7 @@
         <div class="col-md-4">
           <h2>What you'll learn about.</h2>
           <p>From operations to budgeting, redevelopment to demographics, the Jersey City website offers a wealth of statistical data that you can freely access and use to better understand what's happening in your community.</p>
-          <p><a class="btn btn-default" href="#data" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="#data2understand" role="button">View details &raquo;</a></p>
         </div>
       </div>
 
@@ -141,9 +142,9 @@
               </p>
               <p class="lead">In the final hour, each team gets to shine, giving a concise presentation showing how you solved your particular civic challenge.
               </p>
-              <p class="lead">Whether you're a tech newbie, a seasoned developer, an urbanist, a civic hacker, a government staffer, a designer, a community organizer, if you care about Jersey City, you're virtually guaranteed to have a great time, make lots of new friends and learn a whole lot of neat stuff.
+              <p id="data2understand" class="lead">Whether you're a tech newbie, a seasoned developer, an urbanist, a civic hacker, a government staffer, a designer, a community organizer, if you care about Jersey City, you're virtually guaranteed to have a great time, make lots of new friends and learn a whole lot of neat stuff.
               </p>
-              <h2 class="featurette-heading">Data to understand your evolving neighboorhood.</h2>
+              <h2  class="featurette-heading">Data to understand your evolving neighboorhood.</h2>
               <p class="lead"><a href="http://www.cityofjerseycity.com/data/">The Jersey City website</a> offers an wealth of statistical data that you (or anyone) can download to better understand what's happening in your neighborhood and city. Available general categories include Operational Data, Budget Visualization, Redevelopment Plans, City Planning Studies, Demographic Data, Maps, Presentations and Affordable Housing.</p>
                <p class="lead">Available operational statistics include "dashboard files" for the Housing and Parking Authorities and the Police and Fire Departments. Files are also available on Municipal Utilities, Tax Abatements, Building Inspections, Vacant Buildings and Lots and Building Permit Status.
               </p>
@@ -151,14 +152,23 @@
               </p>
               <p class="lead">A few minutes of perusing <a href="http://www.cityofjerseycity.com/data/">the JC data portal's</a> links and you'll find all the data that you never knew you needed!
               </p>
+              
+              
               <!-- <div class="embed-responsive embed-responsive-16by9"> -->
               <!-- <iframe class="embed-responsive-item" src="//www.youtube.com/embed/nKIu9yen5nc"></iframe> -->
             </div>
           </div>
         </div>
       </div>
-
-
+	<div class="container" id="tedVideo">
+		<hr class="featurette-divider">
+		  <div class="row featurette">
+		  <h2 class="featurette-heading">The power of open data</h2>
+		  <div class="embed-responsive embed-responsive-16by9">
+		    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6BTg8OXhEZk"></iframe>
+		  </div>
+		</div>
+	 </div>
       <div class="container" id="speakers">
         <hr class="featurette-divider">
           <div class="row featurette">
@@ -391,9 +401,10 @@
                       <td>11:00-2:00pm</td>
                       <td>Introduce the participants and hands on session</td>
                     </tr>
+                    
                     <tr>
                       <td>3:00-4:00pm</td>
-                      <td>Project Presentations</td>
+                      <td> Project Presentations</td>
                     </tr>
                   </tbody>
                 </table>
@@ -427,8 +438,6 @@
                   </div>
               </div>
 
-              
-
                 </center>
                 </div>
             </center>
@@ -461,5 +470,29 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+	   $(document).ready(function(){
+	   // cache the window object
+	   $window = $(window);
+	 
+	   $('section[data-type="background"]').each(function(){
+	     // declare the variable to affect the defined data-type
+	     var $scroll = $(this);
+		             
+	      $(window).scroll(function() {
+		// HTML5 proves useful for helping with creating JS functions!
+		// also, negative value because we're scrolling upwards                             
+		var yPos = -($window.scrollTop() / $scroll.data('speed')); 
+		 
+		// background position
+		var coords = '50% '+ yPos + 'px';
+	 
+		// move the background
+		$scroll.css({ backgroundPosition: coords });    
+	      }); // end window scroll
+	   });  // end section function
+	}); // close out script
+    </script>
+    
   </body>
 </html>

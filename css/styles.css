@@ -1,3 +1,12 @@
+#main { 
+    background: url(../img/National+Day+of+Civic+Hacking.jpg) 50% 0; 
+    height: auto;  
+    margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 0 0;
+}
 .sponsor {
 	padding-top: 20px;
 	padding-bottom: 20px;
