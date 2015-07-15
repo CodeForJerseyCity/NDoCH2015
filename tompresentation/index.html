@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reproducibility</title>
+  <meta name="description" content="">
+  <meta name="author" content="Tom_Bruning">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h1>Reproducibility</h1>
+  
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h3>Why Reproducibility</h3>
+  <ul>
+<li><span style="color:green; font-weight:bold">YOU</span> are responsible for your work</li>
+<li><p>Replication is often times impossible</p></li>
+<li><p>Validation of <span style="color:green; font-weight:bold">your</span> methods</p></li>
+<li><p>Validation of <span style="color:green; font-weight:bold">your</span>  data</p></li>
+<li><p>So discrepancies can be identified<br>
+... and remedied (by <span style="color:green; font-weight:bold">you</span>) or <span style="color:green; font-weight:bold">your</span> vindication.</p></li>
+<li><p>No one is immune from errors</p>
+
+<p>A former manager of mine said &quot;The only people who don&#39;t make mistakes are those who don&#39;t do anything&quot;</p></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h3>For Example</h3>
+  <h4>Your Work</h4>
+
+<p><img src="./assets/img/plot1.png" alt="Your Work"></p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h3>For Example</h3>
+  <h4>Someone else&#39;s Work</h4>
+
+<p><img src="./assets/img/plot2.png" alt="Your Work"></p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h3>For Example</h3>
+  <h4>Both Charts</h4>
+
+<p><img src="./assets/img/plot3.png" alt="Your Work"></p>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h3>For Example</h3>
+  <h4>Your chart, with documentation</h4>
+
+<p><img src="./assets/img/plot4.png" alt="Your Work"></p>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h3>Examples of faulty data analysis</h3>
+  <p><img src="./assets/img/ss_errors.png" alt="Market Watch"></p>
+
+<p><a href="http://on.cc.com/1rKue88" title="Colbert Report">Colbert Report</a></p>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h3>What To Document</h3>
+  <ol>
+<li><p>Data Source, including date</p>
+
+<p>Includes the analytic data, not necessarily the raw data</p></li>
+<li><p>Software Used, including version</p></li>
+<li><p>Documentation of code and data</p></li>
+</ol>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h3>Challenge Results</h3>
+  <p>Whether <span style="color:green; font-weight:bold">you</span> do, or not, someone else looking at <span style="color:green; font-weight:bold">your</span> data will.</p>
+
+<ul>
+<li><p>Challenge <span style="color:green; font-weight:bold">your</span> steps</p>
+
+<ul>
+<li><span style="color:green; font-weight:bold">Your</span> initial question</li>
+<li>The data source</li>
+<li>The processing <span style="color:green; font-weight:bold">you</span> did</li>
+<li><span style="color:green; font-weight:bold">Your</span> analysis</li>
+<li><span style="color:green; font-weight:bold">Your</span> conclusions </li>
+</ul></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  <h2>Challenge Results (cont)</h2>
+  <ul>
+<li><p>Challenge measures of Uncertainty</p></li>
+<li><p>Challenge choices of terms to include in analysis</p></li>
+<li><p>Think about alternative analysis</p></li>
+</ul>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
